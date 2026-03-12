@@ -155,7 +155,7 @@ export default function Home() {
         {activeCardIndex !== null && (
           <div
             ref={modalBackdropRef}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 overflow-y-auto p-4 pt-[max(1rem,env(safe-area-inset-top))] md:p-0"
+            className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto p-4 pt-[max(1rem,env(safe-area-inset-top))] md:p-0"
             onClick={() => setActiveCardIndex(null)}
           >
             <div

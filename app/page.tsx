@@ -16,7 +16,7 @@ export default function Home() {
           {cards.map(({ index }) => (
             <article
               key={index}
-              className="bg-white rounded-[12px] shadow-sm border border-[#e2e4ea] flex flex-col justify-between w-full min-h-[220px] px-5 py-5 md:w-[388px] md:h-[245px] md:px-8 md:py-7"
+              className="bg-white rounded-[12px] border border-[#e2e4ea] flex flex-col justify-between w-full min-h-[220px] px-5 py-5 md:w-[388px] md:h-[245px] md:px-8 md:py-7"
               onClick={() => setActiveCardIndex(index)}
             >
               <div className="flex justify-between gap-3 md:gap-4 h-full">
@@ -160,7 +160,7 @@ export default function Home() {
           >
             <div
               ref={modalContentRef}
-              className="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl bg-[#0b3b84] text-white my-auto mx-auto max-h-[min(90vh,calc(100vh-2rem))] md:max-h-none flex flex-col md:flex-row min-h-0 shrink-0"
+              className="relative w-full max-w-5xl rounded-2xl overflow-hidden bg-[#0b3b84] text-white my-auto mx-auto max-h-[min(90vh,calc(100vh-2rem))] md:max-h-none flex flex-col md:flex-row min-h-0 shrink-0"
               style={{
                 backgroundImage:
                   "url('https://nexuses.s3.us-east-2.amazonaws.com/Group_1597881447.png')",

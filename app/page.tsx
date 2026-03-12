@@ -7,37 +7,11 @@ export default function Home() {
   const modalBackdropRef = useRef<HTMLDivElement>(null);
   const modalContentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (activeCardIndex !== null) {
-      modalBackdropRef.current?.scrollTo(0, 0);
-      requestAnimationFrame(() => {
-        modalContentRef.current?.scrollIntoView({ block: "start" });
-      });
-    }
-  }, [activeCardIndex]);
-
   const cards = Array.from({ length: 9 }).map((_, index) => ({ index }));
 
   return (
-    <main className="min-h-screen bg-[#f4f5f7] flex justify-center px-4 py-10 md:px-4 md:py-16">
+    <main className="min-h-screen bg-[#F1F1F1] flex justify-center px-4 py-10 md:px-4 md:py-16">
       <div className="w-full max-w-6xl">
-        <section className="mb-6 md:mb-10">
-          <h1
-            className="text-[28px] leading-[34px] font-semibold text-[#1b2838] mb-3 md:text-[40px] md:leading-[48px] md:mb-4"
-            style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-          >
-            Valuation &amp; <span className="text-[#002d7d]">Related Advisory</span>
-          </h1>
-          <p
-            className="text-[16px] leading-[26px] text-[#5b6575] max-w-3xl md:text-[18px] md:leading-[28px]"
-            style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}
-          >
-            Valuation at Finvox is not a compliance checkbox. It is a defensible, structured
-            financial judgment — built for boards, investors, regulators, counterparties, and
-            courts.
-          </p>
-        </section>
-
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {cards.map(({ index }) => (
             <article
@@ -158,15 +132,15 @@ export default function Home() {
                         : index === 3
                         ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006084.png"
                         : index === 4
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_13338380__2_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_13338380__3_.png"
                         : index === 5
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006094__2_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006085__1_.png"
                         : index === 6
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_10208321__1_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_10208321__2_.png"
                         : index === 7
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_994733__1_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_994733__2_.png"
                         : index === 8
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006094__3_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006091__1_.png"
                         : "https://nexuses.s3.us-east-2.amazonaws.com/fi_11126169.png"
                     }
                     alt="Card icon"

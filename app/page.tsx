@@ -16,7 +16,7 @@ export default function Home() {
           {cards.map(({ index }) => (
             <article
               key={index}
-              className="bg-white rounded-[12px] border-2 border-transparent hover:border-[#3347af] transition-all duration-300 ease-out flex flex-col justify-between w-full min-h-[220px] px-5 py-5 md:w-[388px] md:h-[245px] md:px-8 md:py-7"
+              className="group relative bg-white rounded-[12px] border-2 border-transparent hover:border-[#3347af] transition-all duration-300 ease-out flex flex-col justify-between w-full min-h-[220px] px-5 py-5 md:w-[388px] md:h-[245px] md:px-8 md:py-7"
               onClick={() => setActiveCardIndex(index)}
             >
               <div className="flex justify-between gap-3 md:gap-4 h-full">
@@ -41,23 +41,37 @@ export default function Home() {
                       : "01"}
                   </div>
                   <h2 className="text-[18px] leading-[24px] font-semibold text-[#1b2838] mb-2 md:text-[20px] md:leading-[26px] md:mb-3 md:max-w-[210px]">
-                    {index === 1
-                      ? "ESOP, SAR & Equity Instrument Valuation"
-                      : index === 2
-                      ? "M&A & Share Swap Valuation"
-                      : index === 3
-                      ? "Portfolio Valuation"
-                      : index === 4
-                      ? "Litigation, Disputes & Specialist Valuation"
-                      : index === 5
-                      ? "Regulatory & Tax Valuation"
-                      : index === 6
-                      ? "Complex Securities & Instruments"
-                      : index === 7
-                      ? "Specialized & Niche Valuation"
-                      : index === 8
-                      ? "Cross-Border Transaction & Regulatory Valuation"
-                      : "Financial Reporting Valuation"}
+                    {index === 4 ? (
+                      <>
+                        Litigation, Disputes &
+                        <br />
+                        Specialist Valuation
+                      </>
+                    ) : index === 1 ? (
+                      "ESOP, SAR & Equity Instrument Valuation"
+                    ) : index === 2 ? (
+                      "M&A & Share Swap Valuation"
+                    ) : index === 3 ? (
+                      <>
+                        Portfolio
+                        <br />
+                        Valuation
+                      </>
+                    ) : index === 5 ? (
+                      "Regulatory & Tax Valuation"
+                    ) : index === 6 ? (
+                      "Complex Securities & Instruments"
+                    ) : index === 7 ? (
+                      "Specialized & Niche Valuation"
+                    ) : index === 8 ? (
+                      <>
+                        Cross-Border Transaction &
+                        <br />
+                        Regulatory Valuation
+                      </>
+                    ) : (
+                      "Financial Reporting Valuation"
+                    )}
                   </h2>
                   <ul className="list-disc list-inside space-y-0.5 md:space-y-1 text-[14px] leading-[20px] md:text-[15px] md:leading-[22px] text-[#5b6575]">
                     {index === 1 ? (
@@ -148,6 +162,14 @@ export default function Home() {
                   />
                 </div>
               </div>
+              <span className="absolute right-4 bottom-4 md:right-5 md:bottom-5 w-7 h-7 md:w-8 md:h-8 rounded-full border border-[#d7dcec] text-[#3347af] flex items-center justify-center leading-none pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#3347af] group-hover:border-[#3347af] group-hover:text-white">
+                <span className="text-[14px] md:text-[16px] transition-all duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-0 group-hover:-translate-x-0.5">
+                  &gt;
+                </span>
+                <span className="absolute text-[14px] md:text-[16px] opacity-0 -translate-x-1 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100 group-hover:translate-x-0">
+                  &rarr;
+                </span>
+              </span>
             </article>
           ))}
         </section>

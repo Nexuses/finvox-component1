@@ -16,7 +16,7 @@ export default function Home() {
           {cards.map(({ index }) => (
             <article
               key={index}
-              className="bg-white rounded-[12px] border border-[#e2e4ea] flex flex-col justify-between w-full min-h-[220px] px-5 py-5 md:w-[388px] md:h-[245px] md:px-8 md:py-7"
+              className="bg-white rounded-[12px] border-2 border-transparent hover:border-[#3347af] transition-all duration-300 ease-out flex flex-col justify-between w-full min-h-[220px] px-5 py-5 md:w-[388px] md:h-[245px] md:px-8 md:py-7"
               onClick={() => setActiveCardIndex(index)}
             >
               <div className="flex justify-between gap-3 md:gap-4 h-full">
@@ -155,12 +155,12 @@ export default function Home() {
         {activeCardIndex !== null && (
           <div
             ref={modalBackdropRef}
-            className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto p-4 pt-[max(1rem,env(safe-area-inset-top))] md:p-0"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-[2px] overflow-y-auto p-4 pt-[max(1rem,env(safe-area-inset-top))] md:p-0"
             onClick={() => setActiveCardIndex(null)}
           >
             <div
               ref={modalContentRef}
-              className="relative w-full max-w-5xl rounded-2xl overflow-hidden bg-[#0b3b84] text-white my-auto mx-auto max-h-[min(90vh,calc(100vh-2rem))] md:max-h-none flex flex-col md:flex-row min-h-0 shrink-0"
+              className="relative w-full max-w-5xl rounded-3xl overflow-hidden ring-1 ring-inset ring-[#3347] bg-[#0b3b84] text-white my-auto mx-auto max-h-[min(90vh,calc(100vh-2rem))] md:max-h-none flex flex-col md:flex-row min-h-0 shrink-0 shadow-[0_30px_90px_-25px_rgba(2,16,60,0.75)]"
               style={{
                 backgroundImage:
                   "url('https://nexuses.s3.us-east-2.amazonaws.com/Group_1597881447.png')",
@@ -170,7 +170,7 @@ export default function Home() {
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute right-3 top-3 md:right-4 md:top-4 text-white/80 hover:text-white text-2xl leading-none z-10 w-10 h-10 flex items-center justify-center touch-manipulation"
+                className="absolute right-4 top-4 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-[#002d7d]/55 text-white hover:bg-[#002d7d]/75 border border-white/35 shadow-lg shadow-[#001744]/35 transition-all duration-300 ease-out text-2xl leading-none touch-manipulation"
                 onClick={() => setActiveCardIndex(null)}
                 aria-label="Close"
               >
@@ -178,7 +178,7 @@ export default function Home() {
               </button>
 
               <div className="flex flex-col md:flex-row min-h-0 flex-1 overflow-hidden md:overflow-y-auto">
-                <div className="md:w-2/5 w-full flex flex-col items-center justify-center pt-14 pb-8 md:py-20 shrink-0 min-h-[220px] md:min-h-0 bg-[#0b3b84] md:bg-transparent">
+                <div className="md:w-2/5 w-full relative flex flex-col items-center justify-center pt-14 pb-8 md:py-20 shrink-0 min-h-[220px] md:min-h-0 bg-[#0b3b84] md:bg-transparent">
                   <img
                     src={
                       activeCardIndex === 1
@@ -200,12 +200,12 @@ export default function Home() {
                         : "https://nexuses.s3.us-east-2.amazonaws.com/fi_11126169__1_.png"
                     }
                     alt="Card icon large"
-                    className="w-20 h-20 md:w-32 md:h-32 object-contain"
+                    className="w-20 h-20 md:w-32 md:h-32 object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.22)]"
                   />
                 </div>
 
-                <div className="md:w-3/5 w-full bg-white/98 text-[#1b2838] px-5 py-6 md:px-10 md:py-12 overflow-y-auto min-h-0 flex-1 min-w-0">
-                  <div className="text-[14px] md:text-[16px] tracking-[0.12em] font-medium text-[#2647b0] mb-2">
+                <div className="md:w-3/5 w-full bg-[#ffffff] text-[#1b2838] px-5 py-6 md:px-10 md:py-12 overflow-y-auto min-h-0 flex-1 min-w-0">
+                  <div className="inline-flex items-center rounded-full bg-[#edf1ff] text-[13px] md:text-[14px] tracking-[0.12em] font-semibold text-[#2647b0] px-3 py-1 mb-3 md:mb-4">
                     {activeCardIndex === 0
                       ? "01"
                       : activeCardIndex === 1
@@ -225,7 +225,7 @@ export default function Home() {
                       : "09"}
                   </div>
 
-                  <h2 className="text-[22px] leading-[28px] font-semibold mb-3 md:text-[32px] md:leading-[40px] md:mb-4">
+                  <h2 className="text-[22px] leading-[28px] font-semibold mb-3 md:text-[32px] md:leading-[40px] md:mb-4 text-[#12213a]">
                     {activeCardIndex === 1
                       ? "ESOP, SAR & Other Option Instruments Valuation"
                       : activeCardIndex === 2
@@ -245,7 +245,7 @@ export default function Home() {
                       : "Financial Reporting Valuation"}
                   </h2>
 
-                  <p className="text-[14px] md:text-[16px] text-[#5b6575] mb-3 md:mb-4">
+                  <p className="text-[14px] md:text-[16px] text-[#42506a] mb-3 md:mb-4 font-medium">
                     {activeCardIndex === 1
                       ? "Stock Options, SARs, Phantom Equity, Performance Linked Shares"
                       : activeCardIndex === 2

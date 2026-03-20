@@ -136,37 +136,37 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div className="w-12 h-12 shrink-0 self-start mt-2 md:w-[70px] md:h-[70px] md:mt-[15px]">
+                <div className="w-[58px] h-[58px] shrink-0 self-start mt-2 md:w-[80px] md:h-[80px] md:mt-[15px]">
                   <img
                     src={
                       index === 1
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_15636012.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin2.svg"
                         : index === 2
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006077.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin3.svg"
                         : index === 3
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006084.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin4.svg"
                         : index === 4
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_13338380__3_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin5.svg"
                         : index === 5
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006085__1_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin6.svg"
                         : index === 6
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_10208321__2_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin7.svg"
                         : index === 7
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fi_994733__2_.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin8.svg"
                         : index === 8
-                        ? "https://nexuses.s3.us-east-2.amazonaws.com/Group_1000006091__1_.png"
-                        : "https://nexuses.s3.us-east-2.amazonaws.com/fi_11126169.png"
+                        ? "https://nexuses.s3.us-east-2.amazonaws.com/fin9.svg"
+                        : "https://nexuses.s3.us-east-2.amazonaws.com/fin1.svg"
                     }
                     alt="Card icon"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain icon-draw-loop"
                   />
                 </div>
               </div>
-              <span className="absolute right-4 bottom-4 md:right-5 md:bottom-5 w-7 h-7 md:w-8 md:h-8 rounded-full border border-[#d7dcec] text-[#3347af] flex items-center justify-center leading-none pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#3347af] group-hover:border-[#3347af] group-hover:text-white">
-                <span className="text-[14px] md:text-[16px] transition-all duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-0 group-hover:-translate-x-0.5">
+              <span className="absolute right-4 bottom-4 md:right-5 md:bottom-5 w-7 h-7 md:w-8 md:h-8 group-hover:w-[33px] group-hover:h-[33px] md:group-hover:w-[37px] md:group-hover:h-[37px] rounded-full border border-[#d7dcec] text-[#3347af] flex items-center justify-center leading-none pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#3347af] group-hover:border-[#3347af] group-hover:text-white">
+                <span className="inline-block scale-x-125 text-[14px] md:text-[16px] transition-all duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-0 group-hover:-translate-x-0.5">
                   &gt;
                 </span>
-                <span className="absolute text-[14px] md:text-[16px] opacity-0 -translate-x-1 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100 group-hover:translate-x-0">
+                <span className="absolute inline-block scale-x-125 group-hover:scale-x-[1.6] text-[14px] md:text-[16px] opacity-0 -translate-x-1 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100 group-hover:translate-x-0">
                   &rarr;
                 </span>
               </span>
@@ -222,7 +222,7 @@ export default function Home() {
                         : "https://nexuses.s3.us-east-2.amazonaws.com/fi_11126169__1_.png"
                     }
                     alt="Card icon large"
-                    className="w-20 h-20 md:w-32 md:h-32 object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.22)]"
+                    className="w-[90px] h-[90px] md:w-[138px] md:h-[138px] object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.22)] icon-draw-loop"
                   />
                 </div>
 
@@ -312,6 +312,32 @@ export default function Home() {
           </div>
         )}
       </div>
+      <style jsx global>{`
+        .icon-draw-loop {
+          animation: icon-draw-loop 2.8s ease-in-out infinite;
+          transform-origin: center;
+          will-change: clip-path, opacity;
+        }
+
+        @keyframes icon-draw-loop {
+          0% {
+            clip-path: inset(0 100% 0 0);
+            opacity: 0.35;
+          }
+          45% {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+          }
+          70% {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+          }
+          100% {
+            clip-path: inset(0 100% 0 0);
+            opacity: 0.35;
+          }
+        }
+      `}</style>
     </main>
   );
 }

@@ -163,8 +163,21 @@ export default function Home() {
                 </div>
               </div>
               <span className="absolute right-4 bottom-4 md:right-5 md:bottom-5 w-7 h-7 md:w-8 md:h-8 group-hover:w-[33px] group-hover:h-[33px] md:group-hover:w-[37px] md:group-hover:h-[37px] rounded-full border border-[#d7dcec] text-[#3347af] flex items-center justify-center leading-none pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#3347af] group-hover:border-[#3347af] group-hover:text-white">
-                <span className="inline-block scale-x-125 text-[14px] md:text-[16px] transition-all duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-0">
-                  &gt;
+                <span className="inline-flex items-center justify-center transition-all duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-0">
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    className="w-[14px] h-[14px] md:w-[16px] md:h-[16px]"
+                  >
+                    <path
+                      d="M8 4 L16 12 L8 20"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </span>
                 <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <span className="inline-block scale-x-125 group-hover:scale-x-[1.6] text-[14px] md:text-[16px] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100">
